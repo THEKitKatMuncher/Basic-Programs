@@ -84,11 +84,12 @@ int main()
         case 4: // change terminal colour
         {
             system("cls");
-            int Select = 0;
+            int ColorSelect = 0;
             cout << "Enter a number between 1 and 16: ";
-            cin >> Select;
-            switch (Select)
+            cin >> ColorSelect;
+            switch (ColorSelect)
             {
+
             case 1:
             {
                 system("color 0");
@@ -185,9 +186,20 @@ int main()
                 break;
             }
 
+            default:
+            {
+                cout << "Invalid Input\n";
+                break;
             }
-        case 0:
+
+            break;
+            }
+            break;
+        }
+
+        case 0: // termination
         {
+            cout << "---- Terminating Program - -- --- ----";
             break;
         }
 
