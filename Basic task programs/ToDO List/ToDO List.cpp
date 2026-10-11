@@ -19,7 +19,7 @@ void TaskPrint(string tasks [], int taskCount)
 
 int main()
 {
-    system("color a ");
+    system("color e ");
     string tasks[10] = { "" };
     // counter var --> tasks amount
     int taskCount = 0;
@@ -173,6 +173,7 @@ int main()
                 default:
                 {
                     cout << "Invalid Input\n";
+                    break;
                 }
             }
             break;
@@ -184,8 +185,12 @@ int main()
             break;
         }
         default:
-            cout << "Invalid Command please try again\n";
+        {
 
+            cout << "Invalid Command please try again\n";
+            break;
+
+        }
         }
 
     }
