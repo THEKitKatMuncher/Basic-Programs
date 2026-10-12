@@ -7,14 +7,14 @@ using namespace std;
 
 void TaskPrint(string TASKARRAY[], int TaskCount)
 {
-	cout << " TASKS TO DO:\n";
-	cout << "---------------\n";
+    cout << " TASKS TO DO:\n";
+    cout << "---------------\n";
 
-	for (int i = 0; i < TaskCount; i++)
-	{
-		cout << "Task " << i << " --- " << TASKARRAY[i] << "\n";
-	}
-}
+    for (int i = 0; i < TaskCount; i++)
+    {
+        cout << "Task " << i << " --- " << TASKARRAY[i] << "\n";
+    }
+};
 
 int AddTask(string TASKARRAY[], int TaskCount)
 {
@@ -31,9 +31,9 @@ int AddTask(string TASKARRAY[], int TaskCount)
         TaskCount++;
     }
     return TASKARRAY;
-}
+};
 
-int TaskDelete(string TASKARRAY, int TaskCount);
+int TaskDelete(string TASKARRAY, int TaskCount)
 {
     TaskPrint(TASKARRAY, TaskCount);
     int del_task = 0;
@@ -51,9 +51,9 @@ int TaskDelete(string TASKARRAY, int TaskCount);
         TASKARRAY[i] = TASKARRAY[i + 1];
     }
     TaskCount--;
-}
+};
 
-int ColourChange(int ColorSelect);
+int ColourChange(int ColorSelect)
 {
     system("cls");
     cout << "Enter a number between 1 and 16: ";
@@ -86,7 +86,7 @@ int ColourChange(int ColorSelect);
 
 
 
-int main()
+int main();
 {
     //Varable Decleration
     system("Color e");
@@ -95,7 +95,7 @@ int main()
     fstream TaskList;
     int Option = 1;
     // loading save data
-    TaskList.open("Task list.txt", ios::in);// Read From File
+    TaskList.open("Task list.txt", ios::in); // Read From File
     if (TaskList.is_open())
     {
         string line;
@@ -153,7 +153,7 @@ int main()
         {
             cout << "---- Terminating Program - -- --- ----";
             // saving data
-            TaskList.open("Task list.txt", ios::out);// Write To File
+            TaskList.open("Task list.txt", ios::out); // Write To File
             if (TaskList.is_open())
             {
                 for (int i = 0; i < TaskCount; i++)
