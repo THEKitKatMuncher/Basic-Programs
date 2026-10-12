@@ -82,15 +82,11 @@ int main()
             cout << "Enter a task to delete: ";
             cin >> del_task;
 
-            if (del_task < 0 or del_task > 9)
+            if (del_task < 0 or del_task > 9 or TaskCount < del_task)
             {
                 cout << "Invalid task No. \n";
                 MessageBeep(20);
                 break;
-            }
-            for (int i = del_task; i < TaskCount; i++)
-            {
-                TASKARRAY[i] = TASKARRAY[i + 1];
             }
             TaskCount--;
             break;
