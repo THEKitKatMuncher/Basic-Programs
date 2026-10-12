@@ -9,6 +9,7 @@ void TaskPrint(string TASKARRAY[], int TaskCount)
 {
 	cout << " TASKS TO DO:\n";
 	cout << "---------------\n";
+
 	for (int i = 0; i < TaskCount; i++)
 	{
 		cout << "Task " << i << " --- " << TASKARRAY[i] << "\n";
@@ -54,6 +55,7 @@ int main()
             if (TaskCount > 9)
             {
                 cout << "--- TASK LIST IS FULL ---\n";
+                MessageBeep(20);
             }
             else
             {
@@ -83,6 +85,7 @@ int main()
             if (del_task < 0 or del_task > 9)
             {
                 cout << "Invalid task No. \n";
+                MessageBeep(20);
                 break;
             }
             for (int i = del_task; i < TaskCount; i++)
@@ -201,6 +204,7 @@ int main()
             default:
             {
                 cout << "Invalid Input\n";
+                MessageBeep(20);
                 break;
             }
 
@@ -226,6 +230,7 @@ int main()
             else
             {
                 cout << "Error saving tasks to file.\n";
+                MessageBeep(20);
             }
             break;
         }
@@ -233,6 +238,7 @@ int main()
         default:
         {
             cout << "--- Invalid Command Please Enter A New Command ---";
+            MessageBeep(20);
             break;
         }
 
