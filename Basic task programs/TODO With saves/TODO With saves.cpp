@@ -21,8 +21,20 @@ int main()
     system("Color e");
     string TASKARRAY[10] = { "" };
     int TaskCount = 0;
+    fstream TaskList;
     int Option = 1;
-
+    // loading save data
+    TaskList.open("Task list.txt", ios::in);// Read From File
+    if (TaskList.is_open())
+    {
+        string line;
+        while (TaskCount < 10 && getline(TaskList, line))
+        {
+            TASKARRAY[TaskCount] = line;
+            TaskCount++;
+        }
+        TaskList.close();
+    }
     while (Option != 0)
     {
         // Command Menu
@@ -200,6 +212,21 @@ int main()
         case 0: // termination
         {
             cout << "---- Terminating Program - -- --- ----";
+            // saving data
+            TaskList.open("Task list.txt", ios::out);// Write To File
+            if (TaskList.is_open())
+            {
+                for (int i = 0; i < TaskCount; i++)
+                {
+                    TaskList << TASKARRAY[i] << '\n';
+                }
+
+                TaskList.close();
+            }
+            else
+            {
+                cout << "Error saving tasks to file.\n";
+            }
             break;
         }
 
