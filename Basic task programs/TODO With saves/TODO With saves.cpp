@@ -88,6 +88,13 @@ int main()
                 MessageBeep(20);
                 break;
             }
+            else
+            {
+                for (int i = del_task; i < TaskCount - 1; i++)
+                {
+                    TASKARRAY[i] = TASKARRAY[i + 1];
+                }
+            }
             TaskCount--;
             break;
         }
