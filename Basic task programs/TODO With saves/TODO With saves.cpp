@@ -138,6 +138,18 @@ int main();
         {
             system("cls");
             TaskDelete(TASKARRAY, TaskCount);
+            TaskPrint(TASKARRAY, TaskCount);
+            int del_task = 0;
+            cout << "Enter a task to delete: ";
+            cin >> del_task;
+
+            if (del_task < 0 or del_task > 9 or TaskCount < del_task)
+            {
+                cout << "Invalid task No. \n";
+                MessageBeep(20);
+                break;
+            }
+            TaskCount--;
             break;
         }
 
