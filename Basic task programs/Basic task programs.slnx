@@ -4,6 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="Custom Timer/Custom Timer.vcxproj" Id="fc5a5f8f-be30-4b92-82c4-0613a142b965" />
-  <Project Path="ToDO List/ToDO List.vcxproj" Id="f68efafc-cfc3-4c62-afad-8a0753c294d8" />
   <Project Path="TODO With saves/TODO With saves.vcxproj" Id="5d6c4aab-9f2d-4923-a4bf-eea9a2f13751" />
 </Solution>
