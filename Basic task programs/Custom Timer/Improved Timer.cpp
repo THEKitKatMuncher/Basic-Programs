@@ -5,7 +5,7 @@
 using namespace std;
 
 // Variables
-int option = 1;
+int TimerOption = 1;
 float Timer = 0;
 float StartTime = 0;
 float Duration = 0;
@@ -21,10 +21,10 @@ int main() // main function
 		cout << "<---- Command List ----> \n";
 		cout << "1 ----- Set Timer -----> \n";
 		cout << "2 --- Close Program ---> \n";
-		cin >> option;
+		cin >> TimerOption;
 
 		// Command Logic
-		switch (option)
+		switch (TimerOption)
 		{
 		case 1:
 		{
