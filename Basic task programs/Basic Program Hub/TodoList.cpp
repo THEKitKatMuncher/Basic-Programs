@@ -4,7 +4,7 @@
 #include <fstream>
 
 // TODO Function
-void TODOTASK(int TaskOption, int TaskCount, string TASKARRAY[])
+void TODOTASK(int TaskOption, int TaskCount, string TASKARRAY[], fstream& TaskList)
 {
 	while (TaskOption != 0) // Keeps in TODO Till user exits
 	{
@@ -85,6 +85,24 @@ void TODOTASK(int TaskOption, int TaskCount, string TASKARRAY[])
 
 		case 0:
 		{
+			cout << "---- Terminating Program - -- --- ----";
+			system("cls");
+			// saving data
+			TaskList.open("Task list.txt", ios::out);// Write To File
+			if (TaskList.is_open())
+			{
+				for (int i = 0; i < TaskCount; i++)
+				{
+					TaskList << TASKARRAY[i] << '\n';
+				}
+
+				TaskList.close();
+			}
+			else
+			{
+				cout << "Error saving tasks to file.\n";
+				MessageBeep(20);
+			}
 			break;
 		}
 		}

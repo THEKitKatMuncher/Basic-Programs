@@ -28,24 +28,7 @@ int main()
 				TaskList.close();
 			}
 
-			TODOTASK(TaskOption, TaskCount, TaskArray);
-
-			// saving data
-			TaskList.open("Task list.txt", ios::out);// Write To File
-			if (TaskList.is_open())
-			{
-				for (int i = 0; i < TaskCount; i++)
-				{
-					TaskList << TaskArray[i] << '\n';
-				}
-
-				TaskList.close();
-			}
-			else
-			{
-				cout << "Error saving tasks to file.\n";
-				MessageBeep(20);
-			}
+			TODOTASK(TaskOption, TaskCount, TaskArray,TaskList);
 			break;
 		}
 		
@@ -55,7 +38,6 @@ int main()
 			TimerFunc(TimerOption, Timer, StartTime, Duration, InUse, TimerComplete);
 			break;
 		}
-
 		}
 	}
 }

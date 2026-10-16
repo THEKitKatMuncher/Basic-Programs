@@ -9,4 +9,4 @@ int ProgramSelectLoop(bool Active, int option);
 
 void TimerFunc(int TimerOption, float Timer, float StartTime, float Duration, bool InUse, bool TimerComplete);
 
-void TODOTASK(int TaskOption, int TaskCount, string TASKARRAY[]);
+void TODOTASK(int TaskOption, int TaskCount, string TASKARRAY[], fstream& TaskList);
