@@ -17,3 +17,9 @@ float StartTime = 0;
 float Duration = 0;
 bool InUse = true;
 bool TimerComplete = false;
+
+// TODO Variables
+string TaskArray[10] = { "" };
+fstream TaskList;
+int TaskCount = 0;
+int TaskOption = 1;

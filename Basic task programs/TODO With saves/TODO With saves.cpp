@@ -23,7 +23,7 @@ int main()
     string TASKARRAY[10] = { "" };
     int TaskCount = 0;
     fstream TaskList;
-    int Option = 1;
+    int TaskOption = 1;
     // loading save data
     TaskList.open("Task list.txt", ios::in);// Read From File
     if (TaskList.is_open())
@@ -36,7 +36,7 @@ int main()
         }
         TaskList.close();
     }
-    while (Option != 0)
+    while (TaskOption != 0)
     {
         // Command Menu
         cout << "---- Command List ----\n";
@@ -45,10 +45,10 @@ int main()
         cout << "3 - To Delete A Task From The List\n";
         cout << "4 - To Change Terminal Colour\n";
         cout << "0 - To Terminate The Program\n";
-        cin >> Option;
+        cin >> TaskOption;
 
         // Command Logic
-        switch (Option)
+        switch (TaskOption)
         {
         case 1: // Adding tasks to list
         {

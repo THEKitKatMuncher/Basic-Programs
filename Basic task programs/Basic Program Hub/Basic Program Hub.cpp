@@ -6,6 +6,7 @@
 
 int main()
 {
+	system("color e");
 	while (ProgOpt != 0)
 	{
 		ProgOpt = ProgramSelectLoop(Active, option);
@@ -14,6 +15,7 @@ int main()
 
 		case 1:
 		{
+			TODOTASK(TaskOption,TaskCount,TaskArray);
 			break;
 		}
 		case 2:
