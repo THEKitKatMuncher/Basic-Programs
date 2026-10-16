@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="Basic Program Hub.cpp" />
     <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TodoList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Function.h" />
