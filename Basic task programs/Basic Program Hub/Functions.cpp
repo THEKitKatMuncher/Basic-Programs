@@ -86,23 +86,22 @@ void TimerFunc(int TimerOption, float Timer, float StartTime, float Duration, bo
 	}
 }
 
-void TODOTASK(int TaskOption, int TaskCount,string TASKARRAY[])
+void TODOTASK(int TaskOption, int TaskCount, string TASKARRAY[])
 {
-	while (TaskOption != 0);
+	while (TaskOption != 0)
 	{
+
 		//Command Menu
 		cout << "---- Command List ----\n";
 		cout << "1 - To Add A New Task\n";
 		cout << "2 - To View The Task List\n";
 		cout << "3 - To Delete A Task From The List\n";
-		cout << "4 - To Change Terminal Colour\n";
 		cout << "0 - To Terminate The Program\n";
 		cin >> TaskOption;
-	}
 
-	//Command Desicion Logic
-	switch(TaskOption)
-	{
+		//Command Desicion Logic
+		switch (TaskOption)
+		{
 		case 1:
 		{
 			// Adding a Task
@@ -166,5 +165,11 @@ void TODOTASK(int TaskOption, int TaskCount,string TASKARRAY[])
 			break;
 		}
 
+		case 0:
+		{
+			break;
+		}
+
+		}
 	}
 }
