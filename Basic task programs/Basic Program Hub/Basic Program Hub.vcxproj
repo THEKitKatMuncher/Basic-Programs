@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Basic Program Hub.cpp" />
+    <ClCompile Include="Colour.cpp" />
     <ClCompile Include="CoreHub.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="TodoList.cpp" />

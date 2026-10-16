@@ -32,12 +32,18 @@ int main()
 			break;
 		}
 		
-		
 		case 2:
 		{
 			TimerFunc(TimerOption, Timer, StartTime, Duration, InUse, TimerComplete);
 			break;
 		}
+
+		case 3:
+		{
+			ColourFunc();
+			break;
+		}
+
 		}
 	}
 }

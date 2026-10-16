@@ -1,7 +1,6 @@
 
 //includes
 #include "Function.h"
-#include <fstream>
 
 // Core Functions
 int ProgramSelectLoop(bool Active, int option)
@@ -12,6 +11,7 @@ int ProgramSelectLoop(bool Active, int option)
 		cout << "<----- PROGRAM LIST ----->\n";
 		cout << "1 -- Task List Program -- \n";
 		cout << "2 ---- Timer Program ---- \n";
+		cout << "3 --- Change the Colour ---\n";
 		cout << "0 -- Close the Terminal -- \n";
 		cin >> option; // player input
 		switch (option) // Player Option Loader
@@ -28,6 +28,13 @@ int ProgramSelectLoop(bool Active, int option)
 			break;
 		}
 		case 2: // timer
+		{
+			Active = false;
+			return option;
+			break;
+		}
+
+		case 3: // Colour
 		{
 			Active = false;
 			return option;
