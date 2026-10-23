@@ -7,7 +7,7 @@ void ColourFunc()
 {
 	system("cls");
 	int ColourSelect = 0;
-	cout << "Enter a number between 1 and 16";
+	cout << "Enter a number between 1 and 16 \n";
 	cin >> ColourSelect;
 
     switch (ColourSelect)

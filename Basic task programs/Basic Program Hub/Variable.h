@@ -12,6 +12,7 @@ int ProgOpt = 1;
 
 // Timer Variables
 int TimerOption = 1;
+float TimerPrint = 0;
 float Timer = 0;
 float StartTime = 0;
 float Duration = 0;

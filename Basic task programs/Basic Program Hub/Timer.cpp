@@ -4,7 +4,7 @@
 #include <fstream>
 
 //Timer Function
-void TimerFunc(int TimerOption, float Timer, float StartTime, float Duration, bool InUse, bool TimerComplete)
+void TimerFunc(int TimerOption,float TimerPrint, float Timer, float StartTime, float Duration, bool InUse, bool TimerComplete)
 {
 	while (InUse == true) // Program Run loop
 	{
@@ -26,6 +26,8 @@ void TimerFunc(int TimerOption, float Timer, float StartTime, float Duration, bo
 			while (TimerComplete == false) // loop till timer met
 			{
 				Duration = clock() - StartTime; // checks time
+				TimerPrint = (clock() - StartTime) / CLOCKS_PER_SEC;
+				cout << TimerPrint << "\n";
 				if (Duration / CLOCKS_PER_SEC == Timer) // check if timer complete
 				{
 					TimerComplete = true; // sets timer complete

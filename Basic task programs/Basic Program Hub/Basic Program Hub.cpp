@@ -6,14 +6,14 @@
 
 int main()
 {
-	system("color e");
+	system("color 3");
 	while (ProgOpt != 0)
 	{
-		ProgOpt = ProgramSelectLoop(Active, option);
+		ProgOpt = ProgramSelectLoop(Active, option); // Program select menu
 		switch (ProgOpt)
 		{
 
-		case 1:
+		case 1: // Todo list program
 		{
 			// loading save data
 			TaskList.open("Task list.txt", ios::in);// Read From File
@@ -27,19 +27,21 @@ int main()
 				}
 				TaskList.close();
 			}
-
-			TODOTASK(TaskOption, TaskCount, TaskArray,TaskList);
+			//Todo Functions
+			TODOTASK(TaskOption, TaskCount, TaskArray,TaskList); 
 			break;
 		}
 		
-		case 2:
+		case 2:	
 		{
-			TimerFunc(TimerOption, Timer, StartTime, Duration, InUse, TimerComplete);
+			//Timer Function
+			TimerFunc(TimerOption,TimerPrint, Timer, StartTime, Duration, InUse, TimerComplete);
 			break;
 		}
 
 		case 3:
 		{
+			//colour function
 			ColourFunc();
 			break;
 		}
